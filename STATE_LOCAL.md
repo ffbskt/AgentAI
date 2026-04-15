@@ -2,22 +2,13 @@ Files:
 - STATE_LOCAL.md
 - AGENT.md
 - PROTOCOL.md
-- arithmetic-transformer/run_training.ipynb
-- arithmetic-transformer/validate_checkpoint.py
-- .gitignore
-- arithmetic-transformer/README.md
-- arithmetic-transformer/train.py
-- arithmetic-transformer/requirements.txt
-- arithmetic-transformer/requirements-colab.txt
-- arithmetic-transformer/methods.py
-- arithmetic-transformer/dataset.py
+- task_rlvr_tiny_transformer.md
 - arithmetic-transformer/model.py
-- arithmetic-transformer/EXPERIMENTS.md
-- arithmetic-transformer/runs/
-- arithmetic-transformer/checkpoints/
+- arithmetic-transformer/rlvr_tiny/
+- arithmetic-transformer/TASK_RESULTS.md
 
-Curent task [3]:
-Prepare a slim Colab-ready workspace bundle with only required runnable files, add notebook support for Drive checkpoints, and document this structure in workspace instructions.
+Curent task [4]:
+Build the modular RLVR tiny-transformer framework from the task file, run small validation experiments phase by phase, and save a concise task report.
 
 Goal task:
 - [done] Rewrite `AGENT.md` into a clear working instruction file.
@@ -35,5 +26,7 @@ Goal task:
 - [done] Add checkpoint validation script and log validation result.
 - [done] Initialize a root git repository for this workspace.
 - [done] Add `.gitignore` rule for model checkpoints (`*.pt` only).
-- [todo] Run the README-style 32K LSTM curriculum and save the 3-digit checkpoint.
-- [todo] Update the experiment notes with the real run results.
+- [done] Implement symbolic formatting, dataset generation, verifier, curriculum config, and evaluation modules for RLVR arithmetic traces.
+- [done] Implement short SFT, RLVR, and best-of-N training loops for tiny transformer phases.
+- [done] Run small validation experiments for early phases and baseline comparisons.
+- [done] Write `TASK_RESULTS.md` with literature summary, metrics, examples, and recommendations.

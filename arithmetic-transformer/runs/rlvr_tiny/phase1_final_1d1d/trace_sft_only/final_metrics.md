@@ -1,0 +1,9 @@
+| Metric | Value |
+| --- | --- |
+| final_answer_accuracy | 0.0 |
+| parseable_trace_rate | 0.09375 |
+| full_step_valid_rate | 0.0 |
+| average_valid_step_fraction | 0.0 |
+| exact_full_trace_correct_rate | 0.0 |
+| average_output_length | 4.09375 |
+| num_examples | 32 |

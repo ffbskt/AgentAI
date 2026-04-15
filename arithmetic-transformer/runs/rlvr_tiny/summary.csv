@@ -1,0 +1,8 @@
+phase,baseline,decision,final_answer_accuracy,parseable_trace_rate,full_step_valid_rate,checkpoint
+phase0_baseline,answer_sft_only,unclear,0.0,1.0,0.0,runs\rlvr_tiny\phase0_baseline\answer_sft_only\phase_checkpoint.pt
+phase1_final_1d1d,trace_sft_only,unclear,0.0,0.09375,0.0,runs\rlvr_tiny\phase1_final_1d1d\trace_sft_only\phase_checkpoint.pt
+phase1_final_1d1d,trace_sft_rlvr,unclear,0.0625,1.0,0.0625,runs\rlvr_tiny\phase1_final_1d1d\trace_sft_rlvr\phase_checkpoint.pt
+phase2_trace_2d1d,answer_sft_only,unclear,0.0,0.0,0.0,runs\rlvr_tiny\phase2_trace_2d1d\answer_sft_only\phase_checkpoint.pt
+phase2_trace_2d1d,trace_sft_only,unclear,0.0,1.0,0.0,runs\rlvr_tiny\phase2_trace_2d1d\trace_sft_only\phase_checkpoint.pt
+phase2_trace_2d1d,trace_sft_rlvr,unclear,0.0,1.0,0.0,runs\rlvr_tiny\phase2_trace_2d1d\trace_sft_rlvr\phase_checkpoint.pt
+phase2_trace_2d1d,trace_sft_best_of_n,unclear,0.0,1.0,0.0,runs\rlvr_tiny\phase2_trace_2d1d\trace_sft_best_of_n\phase_checkpoint.pt

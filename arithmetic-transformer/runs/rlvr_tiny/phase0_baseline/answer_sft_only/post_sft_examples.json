@@ -1,0 +1,102 @@
+[
+  {
+    "prompt": "574+727=",
+    "completion": "14777",
+    "full_trace": "574+727=14777",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19870000000000002,
+    "error_type": null
+  },
+  {
+    "prompt": "482+373=",
+    "completion": "4777",
+    "full_trace": "482+373=4777",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1988,
+    "error_type": null
+  },
+  {
+    "prompt": "241+290=",
+    "completion": "4777",
+    "full_trace": "241+290=4777",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1988,
+    "error_type": null
+  },
+  {
+    "prompt": "987+792=",
+    "completion": "4777",
+    "full_trace": "987+792=4777",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1988,
+    "error_type": null
+  },
+  {
+    "prompt": "106+446=",
+    "completion": "477777",
+    "full_trace": "106+446=477777",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1986,
+    "error_type": null
+  },
+  {
+    "prompt": "614+574=",
+    "completion": "477777",
+    "full_trace": "614+574=477777",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1986,
+    "error_type": null
+  },
+  {
+    "prompt": "719+182=",
+    "completion": "4777",
+    "full_trace": "719+182=4777",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1988,
+    "error_type": null
+  },
+  {
+    "prompt": "442+667=",
+    "completion": "6",
+    "full_trace": "442+667=6",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1991,
+    "error_type": null
+  },
+  {
+    "prompt": "731+816=",
+    "completion": "4777",
+    "full_trace": "731+816=4777",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1988,
+    "error_type": null
+  },
+  {
+    "prompt": "141+845=",
+    "completion": "4777",
+    "full_trace": "141+845=4777",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1988,
+    "error_type": null
+  }
+]

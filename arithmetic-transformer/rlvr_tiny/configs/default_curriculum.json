@@ -1,0 +1,66 @@
+[
+  {
+    "name": "phase0_baseline",
+    "description": "Baseline check on current capability",
+    "fmt": "A",
+    "shape": "3d+3d",
+    "carry_mode": "any",
+    "rl_enabled": false
+  },
+  {
+    "name": "phase1_final_1d1d",
+    "description": "1-digit final answer warmup",
+    "fmt": "A",
+    "shape": "1d+1d",
+    "carry_mode": "any",
+    "rl_enabled": false
+  },
+  {
+    "name": "phase2_trace_2d1d",
+    "description": "2-digit plus 1-digit short traces",
+    "fmt": "B",
+    "shape": "2d+1d",
+    "carry_mode": "easy",
+    "rl_enabled": true
+  },
+  {
+    "name": "phase3_trace_2d2d_simple",
+    "description": "2-digit plus 2-digit moderate traces",
+    "fmt": "C",
+    "shape": "2d+2d",
+    "carry_mode": "simple",
+    "rl_enabled": true
+  },
+  {
+    "name": "phase4_trace_2d2d_carry",
+    "description": "2-digit plus 2-digit carry cases",
+    "fmt": "C",
+    "shape": "2d+2d",
+    "carry_mode": "heavy",
+    "rl_enabled": true
+  },
+  {
+    "name": "phase5_trace_3d_mix",
+    "description": "3-digit extension",
+    "fmt": "C",
+    "shape": "3d+3d",
+    "carry_mode": "any",
+    "rl_enabled": true
+  },
+  {
+    "name": "phase6_compressed_carry",
+    "description": "Compressed carry notation",
+    "fmt": "D",
+    "shape": "2d+2d",
+    "carry_mode": "heavy",
+    "rl_enabled": true
+  },
+  {
+    "name": "phase7_mixed",
+    "description": "Mixed robust training",
+    "fmt": "E",
+    "shape": "3d+3d",
+    "carry_mode": "any",
+    "rl_enabled": true
+  }
+]

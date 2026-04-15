@@ -1,0 +1,40 @@
+{
+  "phase": "phase2_trace_2d1d",
+  "baseline": "trace_sft_best_of_n",
+  "pre_metrics": {
+    "final_answer_accuracy": 0.0,
+    "parseable_trace_rate": 1.0,
+    "full_step_valid_rate": 0.0,
+    "average_valid_step_fraction": 0.0,
+    "exact_full_trace_correct_rate": 0.0,
+    "average_output_length": 23.96875,
+    "num_examples": 32
+  },
+  "post_sft_metrics": {
+    "final_answer_accuracy": 0.0,
+    "parseable_trace_rate": 1.0,
+    "full_step_valid_rate": 0.0,
+    "average_valid_step_fraction": 0.0,
+    "exact_full_trace_correct_rate": 0.0,
+    "average_output_length": 24.0,
+    "num_examples": 32
+  },
+  "post_metrics": {
+    "final_answer_accuracy": 0.0,
+    "parseable_trace_rate": 1.0,
+    "full_step_valid_rate": 0.0,
+    "average_valid_step_fraction": 0.0,
+    "exact_full_trace_correct_rate": 0.0,
+    "average_output_length": 24.0,
+    "num_examples": 32
+  },
+  "decision": "unclear",
+  "checkpoint": "runs\\rlvr_tiny\\phase2_trace_2d1d\\trace_sft_best_of_n\\phase_checkpoint.pt",
+  "sft_info": {
+    "sft_loss_history": [
+      2.275089740753174,
+      1.7548768520355225
+    ]
+  },
+  "best_of_n_steps": 6
+}

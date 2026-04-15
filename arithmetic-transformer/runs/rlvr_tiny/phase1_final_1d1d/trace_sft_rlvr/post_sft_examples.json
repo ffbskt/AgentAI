@@ -1,0 +1,102 @@
+[
+  {
+    "prompt": "7+9=",
+    "completion": "1",
+    "full_trace": "7+9=1",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1995,
+    "error_type": null
+  },
+  {
+    "prompt": "5+4=",
+    "completion": "1",
+    "full_trace": "5+4=1",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1995,
+    "error_type": null
+  },
+  {
+    "prompt": "2+2=",
+    "completion": "1",
+    "full_trace": "2+2=1",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1995,
+    "error_type": null
+  },
+  {
+    "prompt": "0+5=",
+    "completion": "1",
+    "full_trace": "0+5=1",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1995,
+    "error_type": null
+  },
+  {
+    "prompt": "8+7=",
+    "completion": "1",
+    "full_trace": "8+7=1",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1995,
+    "error_type": null
+  },
+  {
+    "prompt": "9+1=",
+    "completion": "1",
+    "full_trace": "9+1=1",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1995,
+    "error_type": null
+  },
+  {
+    "prompt": "5+8=",
+    "completion": "1",
+    "full_trace": "5+8=1",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1995,
+    "error_type": null
+  },
+  {
+    "prompt": "9+0=",
+    "completion": "1",
+    "full_trace": "9+0=1",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1995,
+    "error_type": null
+  },
+  {
+    "prompt": "6+2=",
+    "completion": "1",
+    "full_trace": "6+2=1",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1995,
+    "error_type": null
+  },
+  {
+    "prompt": "7+6=",
+    "completion": "1",
+    "full_trace": "7+6=1",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1995,
+    "error_type": null
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "prompt": "69+9=",
+    "completion": "0+0++++++++++8+8+8+",
+    "full_trace": "69+9=0+0++++++++++8+8+8+",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1976,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "57+4=",
+    "completion": "0+0+1++++++++8+8+8+",
+    "full_trace": "57+4=0+0+1++++++++8+8+8+",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1976,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "27+2=",
+    "completion": "+0+++++++++++8+8+8+",
+    "full_trace": "27+2=+0+++++++++++8+8+8+",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1976,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "96+0=",
+    "completion": "0+0++++++++++8+8+8+",
+    "full_trace": "96+0=0+0++++++++++8+8+8+",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1976,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "53+8=",
+    "completion": "80+8+10+8+8+8+8+8+8",
+    "full_trace": "53+8=80+8+10+8+8+8+8+8+8",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1976,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "69+9=",
+    "completion": "0+0++++++++++8+8+8+",
+    "full_trace": "69+9=0+0++++++++++8+8+8+",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1976,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "20+5=",
+    "completion": "80+8+1++8+8+8+8+8+8",
+    "full_trace": "20+5=80+8+1++8+8+8+8+8+8",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1976,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "80+9=",
+    "completion": "80+8+10+8+8+8+8+8+8",
+    "full_trace": "80+9=80+8+10+8+8+8+8+8+8",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1976,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "99+0=",
+    "completion": "8+0+1+++++++8+8+8+8",
+    "full_trace": "99+0=8+0+1+++++++8+8+8+8",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1976,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "58+2=",
+    "completion": "70+8+10+8+8+8+8+8+8",
+    "full_trace": "58+2=70+8+10+8+8+8+8+8+8",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1976,
+    "error_type": "bad_final"
+  }
+]

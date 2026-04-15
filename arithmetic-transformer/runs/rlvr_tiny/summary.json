@@ -1,0 +1,276 @@
+[
+  {
+    "phase": "phase0_baseline",
+    "baseline": "answer_sft_only",
+    "pre_metrics": {
+      "final_answer_accuracy": 0.0,
+      "parseable_trace_rate": 0.96875,
+      "full_step_valid_rate": 0.0,
+      "average_valid_step_fraction": 0.0,
+      "exact_full_trace_correct_rate": 0.0,
+      "average_output_length": 14.28125,
+      "num_examples": 32
+    },
+    "post_sft_metrics": {
+      "final_answer_accuracy": 0.0,
+      "parseable_trace_rate": 1.0,
+      "full_step_valid_rate": 0.0,
+      "average_valid_step_fraction": 0.0,
+      "exact_full_trace_correct_rate": 0.0,
+      "average_output_length": 12.3125,
+      "num_examples": 32
+    },
+    "post_metrics": {
+      "final_answer_accuracy": 0.0,
+      "parseable_trace_rate": 1.0,
+      "full_step_valid_rate": 0.0,
+      "average_valid_step_fraction": 0.0,
+      "exact_full_trace_correct_rate": 0.0,
+      "average_output_length": 12.3125,
+      "num_examples": 32
+    },
+    "decision": "unclear",
+    "checkpoint": "runs\\rlvr_tiny\\phase0_baseline\\answer_sft_only\\phase_checkpoint.pt",
+    "sft_info": {
+      "sft_loss_history": [
+        2.7644050121307373
+      ]
+    }
+  },
+  {
+    "phase": "phase1_final_1d1d",
+    "baseline": "trace_sft_only",
+    "pre_metrics": {
+      "final_answer_accuracy": 0.0,
+      "parseable_trace_rate": 0.03125,
+      "full_step_valid_rate": 0.0,
+      "average_valid_step_fraction": 0.0,
+      "exact_full_trace_correct_rate": 0.0,
+      "average_output_length": 4.0625,
+      "num_examples": 32
+    },
+    "post_sft_metrics": {
+      "final_answer_accuracy": 0.0,
+      "parseable_trace_rate": 0.09375,
+      "full_step_valid_rate": 0.0,
+      "average_valid_step_fraction": 0.0,
+      "exact_full_trace_correct_rate": 0.0,
+      "average_output_length": 4.09375,
+      "num_examples": 32
+    },
+    "post_metrics": {
+      "final_answer_accuracy": 0.0,
+      "parseable_trace_rate": 0.09375,
+      "full_step_valid_rate": 0.0,
+      "average_valid_step_fraction": 0.0,
+      "exact_full_trace_correct_rate": 0.0,
+      "average_output_length": 4.09375,
+      "num_examples": 32
+    },
+    "decision": "unclear",
+    "checkpoint": "runs\\rlvr_tiny\\phase1_final_1d1d\\trace_sft_only\\phase_checkpoint.pt",
+    "sft_info": {
+      "sft_loss_history": [
+        2.9298205375671387,
+        1.999946117401123
+      ]
+    }
+  },
+  {
+    "phase": "phase1_final_1d1d",
+    "baseline": "trace_sft_rlvr",
+    "pre_metrics": {
+      "final_answer_accuracy": 0.0,
+      "parseable_trace_rate": 1.0,
+      "full_step_valid_rate": 0.0,
+      "average_valid_step_fraction": 0.0,
+      "exact_full_trace_correct_rate": 0.0,
+      "average_output_length": 8.53125,
+      "num_examples": 32
+    },
+    "post_sft_metrics": {
+      "final_answer_accuracy": 0.0625,
+      "parseable_trace_rate": 1.0,
+      "full_step_valid_rate": 0.0625,
+      "average_valid_step_fraction": 0.0625,
+      "exact_full_trace_correct_rate": 0.0625,
+      "average_output_length": 5.0,
+      "num_examples": 32
+    },
+    "post_metrics": {
+      "final_answer_accuracy": 0.0625,
+      "parseable_trace_rate": 1.0,
+      "full_step_valid_rate": 0.0625,
+      "average_valid_step_fraction": 0.0625,
+      "exact_full_trace_correct_rate": 0.0625,
+      "average_output_length": 5.0,
+      "num_examples": 32
+    },
+    "decision": "unclear",
+    "checkpoint": "runs\\rlvr_tiny\\phase1_final_1d1d\\trace_sft_rlvr\\phase_checkpoint.pt",
+    "sft_info": {
+      "sft_loss_history": [
+        2.769968092441559,
+        1.7565177381038666
+      ]
+    }
+  },
+  {
+    "phase": "phase2_trace_2d1d",
+    "baseline": "answer_sft_only",
+    "pre_metrics": {
+      "final_answer_accuracy": 0.0,
+      "parseable_trace_rate": 0.5625,
+      "full_step_valid_rate": 0.0,
+      "average_valid_step_fraction": 0.0,
+      "exact_full_trace_correct_rate": 0.0,
+      "average_output_length": 10.15625,
+      "num_examples": 32
+    },
+    "post_sft_metrics": {
+      "final_answer_accuracy": 0.0,
+      "parseable_trace_rate": 0.0,
+      "full_step_valid_rate": 0.0,
+      "average_valid_step_fraction": 0.0,
+      "exact_full_trace_correct_rate": 0.0,
+      "average_output_length": 5.0,
+      "num_examples": 32
+    },
+    "post_metrics": {
+      "final_answer_accuracy": 0.0,
+      "parseable_trace_rate": 0.0,
+      "full_step_valid_rate": 0.0,
+      "average_valid_step_fraction": 0.0,
+      "exact_full_trace_correct_rate": 0.0,
+      "average_output_length": 5.0,
+      "num_examples": 32
+    },
+    "decision": "unclear",
+    "checkpoint": "runs\\rlvr_tiny\\phase2_trace_2d1d\\answer_sft_only\\phase_checkpoint.pt",
+    "sft_info": {
+      "sft_loss_history": [
+        2.485936005910238,
+        1.7405048410097759
+      ]
+    }
+  },
+  {
+    "phase": "phase2_trace_2d1d",
+    "baseline": "trace_sft_only",
+    "pre_metrics": {
+      "final_answer_accuracy": 0.0,
+      "parseable_trace_rate": 0.90625,
+      "full_step_valid_rate": 0.0,
+      "average_valid_step_fraction": 0.0,
+      "exact_full_trace_correct_rate": 0.0,
+      "average_output_length": 21.59375,
+      "num_examples": 32
+    },
+    "post_sft_metrics": {
+      "final_answer_accuracy": 0.0,
+      "parseable_trace_rate": 1.0,
+      "full_step_valid_rate": 0.0,
+      "average_valid_step_fraction": 0.0,
+      "exact_full_trace_correct_rate": 0.0,
+      "average_output_length": 24.0,
+      "num_examples": 32
+    },
+    "post_metrics": {
+      "final_answer_accuracy": 0.0,
+      "parseable_trace_rate": 1.0,
+      "full_step_valid_rate": 0.0,
+      "average_valid_step_fraction": 0.0,
+      "exact_full_trace_correct_rate": 0.0,
+      "average_output_length": 24.0,
+      "num_examples": 32
+    },
+    "decision": "unclear",
+    "checkpoint": "runs\\rlvr_tiny\\phase2_trace_2d1d\\trace_sft_only\\phase_checkpoint.pt",
+    "sft_info": {
+      "sft_loss_history": [
+        2.5299771626790366,
+        1.9340717395146687
+      ]
+    }
+  },
+  {
+    "phase": "phase2_trace_2d1d",
+    "baseline": "trace_sft_rlvr",
+    "pre_metrics": {
+      "final_answer_accuracy": 0.0,
+      "parseable_trace_rate": 1.0,
+      "full_step_valid_rate": 0.0,
+      "average_valid_step_fraction": 0.0,
+      "exact_full_trace_correct_rate": 0.0,
+      "average_output_length": 6.0,
+      "num_examples": 32
+    },
+    "post_sft_metrics": {
+      "final_answer_accuracy": 0.0,
+      "parseable_trace_rate": 1.0,
+      "full_step_valid_rate": 0.0,
+      "average_valid_step_fraction": 0.0,
+      "exact_full_trace_correct_rate": 0.0,
+      "average_output_length": 24.0,
+      "num_examples": 32
+    },
+    "post_metrics": {
+      "final_answer_accuracy": 0.0,
+      "parseable_trace_rate": 1.0,
+      "full_step_valid_rate": 0.0,
+      "average_valid_step_fraction": 0.0,
+      "exact_full_trace_correct_rate": 0.0,
+      "average_output_length": 6.0,
+      "num_examples": 32
+    },
+    "decision": "unclear",
+    "checkpoint": "runs\\rlvr_tiny\\phase2_trace_2d1d\\trace_sft_rlvr\\phase_checkpoint.pt",
+    "sft_info": {
+      "sft_loss_history": [
+        2.485818783442179,
+        1.888440231482188
+      ]
+    },
+    "rlvr_steps": 10
+  },
+  {
+    "phase": "phase2_trace_2d1d",
+    "baseline": "trace_sft_best_of_n",
+    "pre_metrics": {
+      "final_answer_accuracy": 0.0,
+      "parseable_trace_rate": 1.0,
+      "full_step_valid_rate": 0.0,
+      "average_valid_step_fraction": 0.0,
+      "exact_full_trace_correct_rate": 0.0,
+      "average_output_length": 23.96875,
+      "num_examples": 32
+    },
+    "post_sft_metrics": {
+      "final_answer_accuracy": 0.0,
+      "parseable_trace_rate": 1.0,
+      "full_step_valid_rate": 0.0,
+      "average_valid_step_fraction": 0.0,
+      "exact_full_trace_correct_rate": 0.0,
+      "average_output_length": 24.0,
+      "num_examples": 32
+    },
+    "post_metrics": {
+      "final_answer_accuracy": 0.0,
+      "parseable_trace_rate": 1.0,
+      "full_step_valid_rate": 0.0,
+      "average_valid_step_fraction": 0.0,
+      "exact_full_trace_correct_rate": 0.0,
+      "average_output_length": 24.0,
+      "num_examples": 32
+    },
+    "decision": "unclear",
+    "checkpoint": "runs\\rlvr_tiny\\phase2_trace_2d1d\\trace_sft_best_of_n\\phase_checkpoint.pt",
+    "sft_info": {
+      "sft_loss_history": [
+        2.275089740753174,
+        1.7548768520355225
+      ]
+    },
+    "best_of_n_steps": 6
+  }
+]

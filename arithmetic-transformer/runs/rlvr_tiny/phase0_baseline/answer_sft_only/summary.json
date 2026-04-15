@@ -1,0 +1,38 @@
+{
+  "phase": "phase0_baseline",
+  "baseline": "answer_sft_only",
+  "pre_metrics": {
+    "final_answer_accuracy": 0.0,
+    "parseable_trace_rate": 0.96875,
+    "full_step_valid_rate": 0.0,
+    "average_valid_step_fraction": 0.0,
+    "exact_full_trace_correct_rate": 0.0,
+    "average_output_length": 14.28125,
+    "num_examples": 32
+  },
+  "post_sft_metrics": {
+    "final_answer_accuracy": 0.0,
+    "parseable_trace_rate": 1.0,
+    "full_step_valid_rate": 0.0,
+    "average_valid_step_fraction": 0.0,
+    "exact_full_trace_correct_rate": 0.0,
+    "average_output_length": 12.3125,
+    "num_examples": 32
+  },
+  "post_metrics": {
+    "final_answer_accuracy": 0.0,
+    "parseable_trace_rate": 1.0,
+    "full_step_valid_rate": 0.0,
+    "average_valid_step_fraction": 0.0,
+    "exact_full_trace_correct_rate": 0.0,
+    "average_output_length": 12.3125,
+    "num_examples": 32
+  },
+  "decision": "unclear",
+  "checkpoint": "runs\\rlvr_tiny\\phase0_baseline\\answer_sft_only\\phase_checkpoint.pt",
+  "sft_info": {
+    "sft_loss_history": [
+      2.7644050121307373
+    ]
+  }
+}

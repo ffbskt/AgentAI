@@ -1,0 +1,102 @@
+[
+  {
+    "prompt": "69+9=",
+    "completion": "0",
+    "full_trace": "69+9=0",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19940000000000002,
+    "error_type": null
+  },
+  {
+    "prompt": "57+4=",
+    "completion": "0",
+    "full_trace": "57+4=0",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19940000000000002,
+    "error_type": null
+  },
+  {
+    "prompt": "27+2=",
+    "completion": "0",
+    "full_trace": "27+2=0",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19940000000000002,
+    "error_type": null
+  },
+  {
+    "prompt": "96+0=",
+    "completion": "0",
+    "full_trace": "96+0=0",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19940000000000002,
+    "error_type": null
+  },
+  {
+    "prompt": "53+8=",
+    "completion": "0",
+    "full_trace": "53+8=0",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19940000000000002,
+    "error_type": null
+  },
+  {
+    "prompt": "69+9=",
+    "completion": "0",
+    "full_trace": "69+9=0",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19940000000000002,
+    "error_type": null
+  },
+  {
+    "prompt": "20+5=",
+    "completion": "0",
+    "full_trace": "20+5=0",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19940000000000002,
+    "error_type": null
+  },
+  {
+    "prompt": "80+9=",
+    "completion": "0",
+    "full_trace": "80+9=0",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19940000000000002,
+    "error_type": null
+  },
+  {
+    "prompt": "99+0=",
+    "completion": "0",
+    "full_trace": "99+0=0",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19940000000000002,
+    "error_type": null
+  },
+  {
+    "prompt": "58+2=",
+    "completion": "0",
+    "full_trace": "58+2=0",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19940000000000002,
+    "error_type": null
+  }
+]

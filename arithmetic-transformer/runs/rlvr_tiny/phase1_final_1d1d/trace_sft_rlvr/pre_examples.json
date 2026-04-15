@@ -1,0 +1,102 @@
+[
+  {
+    "prompt": "7+9=",
+    "completion": "58+3+",
+    "full_trace": "7+9=58+3+",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1991,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "5+4=",
+    "completion": "52",
+    "full_trace": "5+4=52",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19940000000000002,
+    "error_type": null
+  },
+  {
+    "prompt": "2+2=",
+    "completion": "52=58",
+    "full_trace": "2+2=52=58",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1991,
+    "error_type": null
+  },
+  {
+    "prompt": "0+5=",
+    "completion": "57777",
+    "full_trace": "0+5=57777",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1991,
+    "error_type": null
+  },
+  {
+    "prompt": "8+7=",
+    "completion": "52=58",
+    "full_trace": "8+7=52=58",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1991,
+    "error_type": null
+  },
+  {
+    "prompt": "9+1=",
+    "completion": "52=58",
+    "full_trace": "9+1=52=58",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1991,
+    "error_type": null
+  },
+  {
+    "prompt": "5+8=",
+    "completion": "52",
+    "full_trace": "5+8=52",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19940000000000002,
+    "error_type": null
+  },
+  {
+    "prompt": "9+0=",
+    "completion": "963+3",
+    "full_trace": "9+0=963+3",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1991,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "6+2=",
+    "completion": "58+3+",
+    "full_trace": "6+2=58+3+",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1991,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "7+6=",
+    "completion": "58+3+",
+    "full_trace": "7+6=58+3+",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1991,
+    "error_type": "bad_final"
+  }
+]
