@@ -1,0 +1,399 @@
+import argparse
+import itertools
+import json
+import os
+import time
+import torch
+import tqdm
+from collections import Counter
+import torch.nn.functional as F
+
+import dataset as my_datasets
+from model import AdditionModel
+
+
+def main():
+    # Needed to enable tensor cores
+    torch.set_float32_matmul_precision("medium")
+
+    parser = argparse.ArgumentParser(
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter
+    )
+    parser.add_argument(
+        "--epochs",
+        type=int,
+        default=1000,
+        help="Number of examples to generate and train on",
+    )
+    parser.add_argument("--train-batches", type=int, default=1000)
+    parser.add_argument("--val-batches", type=int, default=1000)
+    parser.add_argument("--lr", type=float, default=1e-3, help="Adam LR")
+    parser.add_argument(
+        "--acc-next", type=float, default=0.9, help="Accuracy before next level"
+    )
+    # 0.05:  [(1, 1), (2, 2), (3, 8), (4, 11), (5, 25), (6, 76), (7, 206+)]
+    # 0.04:  [(1, 1), (2, 2), (3, 8), (4, 7),  (5, 17), (6, 44), (7, 142), (8, 80+)]
+    # 0.03:  [(1, 1), (2, 2), (3, 9), (4, 7),  (5, 11), (6, 32), (7, 121), (8, 110+)]
+    # 0.02:  [(1, 1), (2, 2), (3, 8), (4, 8),  (5, 18), (6, 29), (7, 105), (8, 118+)]
+    # 0.015: [(1, 1), (2, 2), (3, 8), (4, 16), (5, 25), (6, 70), (7, 131), (8, 107)] 
+    # 0.01:  [(1, 1), (2, 2), (3, 8), (4, 12), (5, 14), (6, 44), (7, 151), (8, 341), (9, 151)]
+    #        [(1, 1), (2, 2), (3, 7), (4, 15), (5, 107), (6, 247)]
+    parser.add_argument("--dropout", type=float, default=0.05)
+    parser.add_argument(
+        "--hidden-size",
+        type=int,
+        default=32,
+        help="The hidden size for the neural network",
+    )
+    parser.add_argument(
+        "--ffw-size",
+        type=int,
+        default=None,
+    )
+    parser.add_argument(
+        "--num-layers",
+        type=int,
+        default=4,
+        help="The number of layers for the neural network",
+    )
+    parser.add_argument("--batch-size", type=int, default=2**10, help="Batch size")
+    parser.add_argument(
+        "--kind",
+        required=True,
+        type=str,
+        help="The type of neural network to use (lstm, transformer, hybrid)",
+    )
+    parser.add_argument(
+        "--op",
+        type=str,
+        default="add",
+        help="Operation to learn (add, mult)",
+    )
+    parser.add_argument(
+        "--cot-padding",
+        type=int,
+        default=0,
+        help="Chain of thought padding",
+    )
+    parser.add_argument(
+        "--base",
+        type=int,
+        default=10,
+    )
+    parser.add_argument(
+        "--initial-number-length",
+        type=int,
+        default=1,
+    )
+    parser.add_argument(
+        "--preferred-dtype",
+        type=str,
+        default='int64',
+        help="Use this dtype if possible (int64, object)"
+    )
+    parser.add_argument("--compile", action="store_true")
+    parser.add_argument("--flip", action="store_true", help="Flip order of numbers")
+    parser.add_argument("--device", type=str, default=None)
+    parser.add_argument("--save-dir", type=str, default=None)
+    parser.add_argument("--save-on-digit", type=int, default=None)
+    parser.add_argument("--save-each-digit", action="store_true")
+    parser.add_argument("--stop-after-save", action="store_true")
+    parser.add_argument("--no-progress", action="store_true")
+    parser.add_argument("--protocol-file", type=str, default=None)
+    parser.add_argument(
+        "--num-heads",
+        type=int,
+        default=4,
+        help="The number of heads/rank in transformer/mlp",
+    )
+    args = parser.parse_args()
+
+    dataset = make_dataset(args, number_length=args.initial_number_length)
+
+    model = AdditionModel(
+        ds=dataset,
+        kind=args.kind,
+        hidden_size=args.hidden_size,
+        ffw_size=2 * args.hidden_size if args.ffw_size is None else args.ffw_size,
+        num_layers=args.num_layers,
+        num_heads=args.num_heads,
+        lr=args.lr,
+        dropout=args.dropout,
+    )
+    num_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
+    print(f"The model has {num_params} parameters")
+
+    if args.compile:
+        model = torch.compile(model)
+    manual_training(model, dataset, args)
+
+
+def make_dataset(args, number_length=1):
+    kvargs = dict(
+        preferred_dtype=args.preferred_dtype,
+        base=args.base,
+        number_length=number_length,
+        pre_end_padding=args.cot_padding,
+        flip=args.flip,
+    )
+    if args.op == "addmod":
+        return my_datasets.AddModDataset(**kvargs)
+    elif args.op == "divmod":
+        return my_datasets.DivModDataset(**kvargs)
+    elif args.op == "add":
+        return my_datasets.BinaryOpDataset(
+            func=(lambda a, b: a + b),
+            sep="+",
+            out_length=number_length + 1,
+            **kvargs,
+        )
+    elif args.op == "mult":
+        return my_datasets.BinaryOpDataset(
+            func=(lambda a, b: a * b),
+            sep="*",
+            out_length=2 * number_length,
+            **kvargs,
+        )
+    elif args.op == "div":
+        return my_datasets.BinaryOpDataset(
+            func=(lambda a, b: a // b),
+            sep="//",
+            min_b=1,
+            out_length=number_length,
+            **kvargs,
+        )
+    elif args.op == "mod":
+        return my_datasets.BinaryOpDataset(
+            func=(lambda a, b: a % b),
+            sep="%",
+            min_b=1,
+            out_length=number_length,
+            **kvargs,
+        )
+    elif args.op == "sqmod":
+        return my_datasets.BinaryOpDataset(
+            func=(lambda a, b: a**2 % b),
+            sep="^2 %",
+            min_b=1,
+            out_length=2 * number_length,
+            **kvargs,
+        )
+    elif args.op == "factor":
+        return my_datasets.FactorDataset(**kvargs)
+
+
+def answer_mask(dataset, batch):
+    """Creates a mask of everything after the END (or =) token, which separates the question
+    from the answer."""
+    mask = torch.cumsum(batch == dataset.end_token, dim=1) == 1
+    mask &= batch != dataset.end_token
+    return mask[:, 1:]
+
+
+def training_step(model, batch):
+    """Computes cross entropy loss between the model output and the ground truth, but only on
+    the tokens after the END token, since the previous data is just random."""
+    mask = answer_mask(model.ds, batch)
+    truth = batch[:, 1:]
+    out = model(batch)[:, :-1]
+    return F.cross_entropy(out[mask], truth[mask])
+
+
+def validation_step(model, batch):
+    """Computes the accuracy on the model, if we assume greedy decoding is used.
+    We only consider a question corectly solved if every single token is correctly predicted,
+    including the padding."""
+    mask = answer_mask(model.ds, batch)
+    truth = batch[:, 1:]
+    out = model(batch)[:, :-1]
+    preds = torch.argmax(out, dim=2)
+
+    # print(f'{truth[0]=}')
+    # print(f'{preds[0]=}')
+
+    # We'd to test that our validation method matches what you get with generate.
+    # Unfortunately the LSTMs give slightly different results when passing a batch,
+    # vs when passing one element at a time, which breaks the direct correspondance.
+    for i in range(0):
+        n = batch[i].tolist().index(model.ds.end_token) + 1
+        true = batch[i, n:]
+        pred0 = preds[i, n - 1 :]
+        pred1 = model.generate(batch[i][:n])
+        if torch.all((preds * mask)[i] == (truth * mask)[i]):
+            assert torch.all(pred0 == true)
+            # If we are getting the answer right, they should be the same.
+            assert torch.all(pred0 == pred1)
+        else:
+            # If we are getting the answer wrong, they should both be wrong.
+            assert not torch.all(pred0 == true)
+            assert not torch.all(pred1 == true)
+
+    return torch.all(preds * mask == truth * mask, dim=1).float().mean()
+
+
+def make_run_config(args, num_params):
+    return {
+        "kind": args.kind,
+        "op": args.op,
+        "hidden_size": args.hidden_size,
+        "ffw_size": args.ffw_size,
+        "num_layers": args.num_layers,
+        "num_heads": args.num_heads,
+        "dropout": args.dropout,
+        "lr": args.lr,
+        "batch_size": args.batch_size,
+        "train_batches": args.train_batches,
+        "val_batches": args.val_batches,
+        "acc_next": args.acc_next,
+        "base": args.base,
+        "initial_number_length": args.initial_number_length,
+        "device": args.device,
+        "flip": args.flip,
+        "num_params": num_params,
+    }
+
+
+def append_protocol_entry(protocol_path, payload):
+    if protocol_path is None:
+        return
+    protocol_dir = os.path.dirname(protocol_path)
+    if protocol_dir:
+        os.makedirs(protocol_dir, exist_ok=True)
+    with open(protocol_path, "a", encoding="utf-8") as f:
+        f.write(json.dumps(payload, sort_keys=True) + "\n")
+
+
+def save_checkpoint(model, optimizer, args, dataset, acc, time_to_success, elapsed_seconds):
+    if args.save_dir is None:
+        return None
+    os.makedirs(args.save_dir, exist_ok=True)
+    num_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
+    checkpoint_path = os.path.join(
+        args.save_dir,
+        f"{args.kind}_digit{dataset.number_length}_epoch{time_to_success[dataset.number_length]}.pt",
+    )
+    torch.save(
+        {
+            "model_state_dict": model.state_dict(),
+            "optimizer_state_dict": optimizer.state_dict(),
+            "args": vars(args),
+            "number_length": dataset.number_length,
+            "accuracy": float(acc),
+            "epochs_per_digit": sorted(time_to_success.items()),
+            "elapsed_seconds": elapsed_seconds,
+            "config": make_run_config(args, num_params),
+        },
+        checkpoint_path,
+    )
+    return checkpoint_path
+
+
+def manual_training(model, dataset, args):
+    if args.device is not None:
+        device = torch.device(args.device)
+    elif torch.cuda.is_available():
+        device = torch.device("cuda")
+    elif torch.backends.mps.is_available():
+        device = torch.device("mps")
+    else:
+        device = torch.device("cpu")
+    model = model.to(device)
+
+    batch_size = args.batch_size
+    optimizer = model.configure_optimizers()
+    run_start = time.time()
+    num_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
+    save_each_digit = args.save_each_digit or args.save_dir is not None
+
+    # Standard PyTorch Training Loop
+    time_to_success = Counter()
+    for epoch in range(args.epochs):
+        train_batches = args.train_batches
+        with torch.no_grad():
+            np_data = dataset.generate_batch(batch_size * train_batches)
+            train_data = torch.tensor(np_data).to(device)
+
+        # Training Loop
+        model.train()
+        for batch_idx in tqdm.tqdm(range(train_batches), disable=args.no_progress):
+            batch = train_data[batch_idx * batch_size : (batch_idx + 1) * batch_size]
+            optimizer.zero_grad()
+            loss = training_step(model, batch)
+            loss.backward()
+            optimizer.step()
+
+        # Validation Loop
+        accs = []
+        model.eval()
+        with torch.no_grad():
+            val_batches = args.val_batches
+            np_data = dataset.generate_batch(batch_size * train_batches)
+            val_data = torch.tensor(np_data).to(device)
+
+            for batch_idx in tqdm.tqdm(range(val_batches), disable=args.no_progress):
+                batch = val_data[batch_idx * batch_size : (batch_idx + 1) * batch_size]
+                acc = validation_step(model, batch)
+                accs.append(acc)
+        acc = torch.mean(torch.tensor(accs))
+        print(f"Validation acc: {acc:.5}")
+
+        # Print some examples. Try to always include an example where the model is wrong.
+        # But if the model is nearly perfect, don't bother, since we might search forever.
+        model.print_examples(3, must_include_a_wrong=acc < args.acc_next)
+
+        time_to_success[dataset.number_length] += 1
+
+        print("Epochs per digit:", sorted(time_to_success.items()))
+        if acc > args.acc_next:
+            elapsed_seconds = time.time() - run_start
+            checkpoint_path = None
+            if save_each_digit:
+                checkpoint_path = save_checkpoint(
+                    model,
+                    optimizer,
+                    args,
+                    dataset,
+                    acc,
+                    time_to_success,
+                    elapsed_seconds,
+                )
+                print(f"Saved checkpoint: {checkpoint_path}")
+            append_protocol_entry(
+                args.protocol_file,
+                {
+                    "event": "digit_learned",
+                    "model": args.kind,
+                    "config": make_run_config(args, num_params),
+                    "digit": dataset.number_length,
+                    "accuracy": float(acc),
+                    "epochs_per_digit": sorted(time_to_success.items()),
+                    "total_learning_time_seconds": elapsed_seconds,
+                    "total_learning_time_minutes": elapsed_seconds / 60.0,
+                    "checkpoint_path": checkpoint_path,
+                },
+            )
+            print(
+                "Protocol:",
+                json.dumps(
+                    {
+                        "model": args.kind,
+                        "digit": dataset.number_length,
+                        "accuracy": round(float(acc), 5),
+                        "total_learning_time_seconds": round(elapsed_seconds, 2),
+                        "checkpoint_path": checkpoint_path,
+                    },
+                    sort_keys=True,
+                ),
+            )
+            if args.stop_after_save and (
+                args.save_on_digit is None or dataset.number_length == args.save_on_digit
+            ):
+                    print("Stopping after saving target digit checkpoint")
+                    return
+            print(f"Switching to number length {dataset.number_length+1}")
+            dataset = make_dataset(args, number_length=dataset.number_length + 1)
+            model.ds = dataset
+
+
+if __name__ == "__main__":
+    main()
