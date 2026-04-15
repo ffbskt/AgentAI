@@ -1,0 +1,34 @@
+{
+  "checkpoint": "checkpoints\\notebook_test\\lstm_digit1_epoch1.pt",
+  "validated_number_length": 1,
+  "saved_accuracy": 0.0,
+  "measured_accuracy": 0.0,
+  "epochs_per_digit": [
+    [
+      1,
+      1
+    ]
+  ],
+  "config": {
+    "kind": "lstm",
+    "op": "add",
+    "hidden_size": 32,
+    "ffw_size": null,
+    "num_layers": 4,
+    "num_heads": 4,
+    "dropout": 0.01,
+    "lr": 0.001,
+    "batch_size": 32,
+    "train_batches": 1,
+    "val_batches": 1,
+    "acc_next": -1.0,
+    "base": 10,
+    "initial_number_length": 1,
+    "device": "cpu",
+    "flip": false,
+    "num_params": 34831
+  },
+  "validation_batches": 20,
+  "validation_batch_size": 256,
+  "device": "cpu"
+}

@@ -84,3 +84,40 @@ With the same ~32K LSTM and the same small CPU training budget:
 - 3-digit addition is not close to solved yet.
 
 This toy result is consistent with the upstream README, where the 32K LSTM needs more training time as digit length increases.
+
+## Notebook Checkpoint Validation
+
+Checkpoint:
+- `checkpoints/notebook_test/lstm_digit1_epoch1.pt`
+
+Validation file:
+- `runs/notebook_test/validation.json`
+
+Purpose:
+- verify that the notebook-style training path really writes a local checkpoint;
+- verify that the checkpoint can be loaded and evaluated again.
+
+Saved config in checkpoint:
+- model: `lstm`
+- operation: `add`
+- hidden size: `32`
+- layers: `4`
+- heads: `4`
+- dropout: `0.01`
+- learning rate: `0.001`
+- train batches: `1`
+- validation batches during save run: `1`
+- batch size during save run: `32`
+- learned digit stage recorded: `1`
+- saved accuracy in checkpoint metadata: `0.0`
+
+Independent validation run:
+- validation batches: `20`
+- validation batch size: `256`
+- device: `cpu`
+- measured validation accuracy: `0.0`
+
+Conclusion:
+- the checkpoint save/load path works correctly;
+- this particular checkpoint is only the forced 1-iteration notebook test checkpoint, not a learned model;
+- it should be used as a pipeline validation artifact, not as a successful arithmetic result.

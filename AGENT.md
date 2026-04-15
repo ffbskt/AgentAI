@@ -36,16 +36,20 @@
   - local computer paths
   - Google Colab paths
 - The notebook should make it easy to switch between local and Colab execution.
+- For Colab, assume the user updates code locally and pushes to git.
+- The notebook must therefore clone the repo if missing and pull the latest changes if it already exists.
 - The notebook must save:
   - checkpoints
   - protocol log
   - train log
+- If the repo path exists in Colab but is not a git repo, remove that broken folder and clone again.
 
 ## Path Rules For Notebook
 - Local path example:
   - `D:/Codex projects/Transformer_Graph3/arithmetic-transformer`
 - Colab path example:
-  - `/content/drive/MyDrive/AgentAI/arithmetic-transformer`
+  - repo root: `/content/drive/MyDrive/AgentAI`
+  - code folder after clone: `/content/drive/MyDrive/AgentAI/arithmetic-transformer`
 - Output folders should be created inside the selected repo path:
   - `checkpoints/`
   - `runs/`

@@ -3,6 +3,7 @@ Files:
 - AGENT.md
 - PROTOCOL.md
 - arithmetic-transformer/run_training.ipynb
+- arithmetic-transformer/validate_checkpoint.py
 - .gitignore
 - arithmetic-transformer/README.md
 - arithmetic-transformer/train.py
@@ -31,6 +32,7 @@ Goal task:
 - [done] Replace duplicated runtime copies with one original runnable folder: `arithmetic-transformer/`.
 - [done] Put the notebook in `arithmetic-transformer/` with both local and Colab paths.
 - [done] Do one local test run and verify local checkpoint saving.
+- [done] Add checkpoint validation script and log validation result.
 - [done] Initialize a root git repository for this workspace.
 - [done] Add `.gitignore` rule for model checkpoints (`*.pt` only).
 - [todo] Run the README-style 32K LSTM curriculum and save the 3-digit checkpoint.
