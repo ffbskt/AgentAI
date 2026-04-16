@@ -38,6 +38,9 @@
 - The notebook should make it easy to switch between local and Colab execution.
 - For Colab, assume the user updates code locally and pushes to git.
 - The notebook must therefore clone the repo if missing and pull the latest changes if it already exists.
+- After any notebook or module change that Colab depends on, commit and push before using Colab clone/pull.
+- Otherwise Colab may load an old repo version even if local files are already updated.
+- If notebook work for Colab is completed successfully, commit and push automatically without asking again.
 - The notebook must save:
   - checkpoints
   - protocol log

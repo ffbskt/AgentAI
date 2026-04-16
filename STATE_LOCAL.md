@@ -3,12 +3,11 @@ Files:
 - AGENT.md
 - PROTOCOL.md
 - task_rlvr_tiny_transformer.md
-- arithmetic-transformer/model.py
-- arithmetic-transformer/rlvr_tiny/
-- arithmetic-transformer/TASK_RESULTS.md
+- arithmetic-transformer/rlvr_tiny/verify.py
+- arithmetic-transformer/rlvr_tiny/tests/
 
 Curent task [4]:
-Build the modular RLVR tiny-transformer framework from the task file, run small validation experiments phase by phase, and save a concise task report.
+Create synthetic verifier corner cases, test each verifier function on them, and run the tests locally.
 
 Goal task:
 - [done] Rewrite `AGENT.md` into a clear working instruction file.
@@ -30,3 +29,6 @@ Goal task:
 - [done] Implement short SFT, RLVR, and best-of-N training loops for tiny transformer phases.
 - [done] Run small validation experiments for early phases and baseline comparisons.
 - [done] Write `TASK_RESULTS.md` with literature summary, metrics, examples, and recommendations.
+- [done] Add two synthetic corner-case model outputs: one correct and one incorrect.
+- [done] Add focused verifier tests that use those synthetic outputs with each verifier function.
+- [done] Run the tests and confirm the verifier behaves correctly.
