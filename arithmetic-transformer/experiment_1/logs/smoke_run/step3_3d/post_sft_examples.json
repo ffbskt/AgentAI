@@ -1,0 +1,102 @@
+[
+  {
+    "prompt": "365+397=",
+    "completion": "40+40+40+6+6+0+0+40+0+0+0+0+6+",
+    "full_trace": "365+397=40+40+40+6+6+0+0+40+0+0+0+0+6+",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1962,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "801+800=",
+    "completion": "40+40+40+40+0+0+40+4+0+0+0+",
+    "full_trace": "801+800=40+40+40+40+0+0+40+4+0+0+0+",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1965,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "921+969=",
+    "completion": "40+40+40+40+0+0+40+4+0+0+0+6+",
+    "full_trace": "921+969=40+40+40+40+0+0+40+4+0+0+0+6+",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1963,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "290+767=",
+    "completion": "40+40+40+6+6+0+0+40+0+0+0+0+6+",
+    "full_trace": "290+767=40+40+40+6+6+0+0+40+0+0+0+0+6+",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1962,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "336+782=",
+    "completion": "0+",
+    "full_trace": "336+782=0+",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.199,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "250+990=",
+    "completion": "40+40+40+40+0+0+40+4+4+0+0+6+",
+    "full_trace": "250+990=40+40+40+40+0+0+40+4+4+0+0+6+",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1963,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "330+756=",
+    "completion": "40+40+40+6+6+0+0+40+0+0+0+0+6+",
+    "full_trace": "330+756=40+40+40+6+6+0+0+40+0+0+0+0+6+",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1962,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "851+291=",
+    "completion": "40+40+40+40+0+0+40+4+0+0+0+6+",
+    "full_trace": "851+291=40+40+40+40+0+0+40+4+0+0+0+6+",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1963,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "233+172=",
+    "completion": "0+",
+    "full_trace": "233+172=0+",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.199,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "644+966=",
+    "completion": "2+",
+    "full_trace": "644+966=2+",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.199,
+    "error_type": "bad_final"
+  }
+]

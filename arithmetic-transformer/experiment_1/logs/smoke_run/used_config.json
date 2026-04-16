@@ -1,0 +1,70 @@
+{
+  "name": "experiment_1",
+  "description": "Mini RLVR curriculum from 1-digit to 5-digit addition with one-epoch smoke phases.",
+  "model": {
+    "kind": "transformer-sine",
+    "hidden_size": 64,
+    "ffw_size": 128,
+    "num_layers": 2,
+    "num_heads": 4,
+    "dropout": 0.0,
+    "lr": 0.001
+  },
+  "train_defaults": {
+    "epochs": 1,
+    "batch_size": 64,
+    "train_samples": 256,
+    "val_samples": 128,
+    "test_samples": 128,
+    "max_new_tokens": 48,
+    "rl_steps": 4,
+    "rl_batch_size": 16,
+    "num_generations": 4,
+    "temperature": 1.0,
+    "kl_coef": 0.02,
+    "best_of_n_steps": 2,
+    "seed": 11
+  },
+  "phases": [
+    {
+      "name": "step1_1d",
+      "description": "1-digit warmup",
+      "fmt": "A",
+      "shape": "1d+1d",
+      "carry_mode": "any",
+      "rl_enabled": true
+    },
+    {
+      "name": "step2_2d",
+      "description": "2-digit reasoning",
+      "fmt": "C",
+      "shape": "2d+2d",
+      "carry_mode": "simple",
+      "rl_enabled": true
+    },
+    {
+      "name": "step3_3d",
+      "description": "3-digit reasoning",
+      "fmt": "C",
+      "shape": "3d+3d",
+      "carry_mode": "any",
+      "rl_enabled": true
+    },
+    {
+      "name": "step4_4d",
+      "description": "4-digit reasoning",
+      "fmt": "C",
+      "shape": "4d+4d",
+      "carry_mode": "any",
+      "rl_enabled": true
+    },
+    {
+      "name": "step5_5d",
+      "description": "5-digit reasoning",
+      "fmt": "C",
+      "shape": "5d+5d",
+      "carry_mode": "heavy",
+      "rl_enabled": true
+    }
+  ]
+}

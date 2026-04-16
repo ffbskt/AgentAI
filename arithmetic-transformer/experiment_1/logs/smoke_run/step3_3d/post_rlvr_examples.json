@@ -1,0 +1,102 @@
+[
+  {
+    "prompt": "365+397=",
+    "completion": "4",
+    "full_trace": "365+397=4",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1991,
+    "error_type": null
+  },
+  {
+    "prompt": "801+800=",
+    "completion": "4",
+    "full_trace": "801+800=4",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1991,
+    "error_type": null
+  },
+  {
+    "prompt": "921+969=",
+    "completion": "4",
+    "full_trace": "921+969=4",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1991,
+    "error_type": null
+  },
+  {
+    "prompt": "290+767=",
+    "completion": "4",
+    "full_trace": "290+767=4",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1991,
+    "error_type": null
+  },
+  {
+    "prompt": "336+782=",
+    "completion": "",
+    "full_trace": "336+782=",
+    "parse_ok": false,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": -0.5,
+    "error_type": "empty_segment"
+  },
+  {
+    "prompt": "250+990=",
+    "completion": "4",
+    "full_trace": "250+990=4",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1991,
+    "error_type": null
+  },
+  {
+    "prompt": "330+756=",
+    "completion": "",
+    "full_trace": "330+756=",
+    "parse_ok": false,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": -0.5,
+    "error_type": "empty_segment"
+  },
+  {
+    "prompt": "851+291=",
+    "completion": "4",
+    "full_trace": "851+291=4",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1991,
+    "error_type": null
+  },
+  {
+    "prompt": "233+172=",
+    "completion": "",
+    "full_trace": "233+172=",
+    "parse_ok": false,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": -0.5,
+    "error_type": "empty_segment"
+  },
+  {
+    "prompt": "644+966=",
+    "completion": "9",
+    "full_trace": "644+966=9",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1991,
+    "error_type": null
+  }
+]

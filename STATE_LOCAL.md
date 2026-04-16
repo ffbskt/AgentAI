@@ -2,12 +2,11 @@ Files:
 - STATE_LOCAL.md
 - AGENT.md
 - PROTOCOL.md
-- task_rlvr_tiny_transformer.md
-- arithmetic-transformer/rlvr_tiny/verify.py
-- arithmetic-transformer/rlvr_tiny/tests/
+- arithmetic-transformer/experiment_1/
+- arithmetic-transformer/rlvr_tiny/
 
 Curent task [4]:
-Create synthetic verifier corner cases, test each verifier function on them, and run the tests locally.
+Create `experiment_1` with configs and logs, add one training entry point using `rlvr_tiny/`, and run a smoke training pass for 1 epoch per phase up to 5 digits.
 
 Goal task:
 - [done] Rewrite `AGENT.md` into a clear working instruction file.
@@ -32,4 +31,7 @@ Goal task:
 - [done] Add two synthetic corner-case model outputs: one correct and one incorrect.
 - [done] Add focused verifier tests that use those synthetic outputs with each verifier function.
 - [done] Run the tests and confirm the verifier behaves correctly.
+- [todo] Create `experiment_1/` with curriculum config and logging structure.
+- [todo] Add `train_experiment_1.py` using functions from `rlvr_tiny/`.
+- [todo] Run a smoke training pass with 1 epoch per phase and save logs/configs.
 - [done] Removed `arithmetic-transformer/verify_walkthrough.ipynb` as an unnecessary step after review. This was a wrong step and should not be restored unless explicitly needed.

@@ -1,0 +1,102 @@
+[
+  {
+    "prompt": "4+4=",
+    "completion": "",
+    "full_trace": "4+4=",
+    "parse_ok": false,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": -0.5,
+    "error_type": "empty_segment"
+  },
+  {
+    "prompt": "2+3=",
+    "completion": "",
+    "full_trace": "2+3=",
+    "parse_ok": false,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": -0.5,
+    "error_type": "empty_segment"
+  },
+  {
+    "prompt": "2+3=",
+    "completion": "",
+    "full_trace": "2+3=",
+    "parse_ok": false,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": -0.5,
+    "error_type": "empty_segment"
+  },
+  {
+    "prompt": "2+2=",
+    "completion": "",
+    "full_trace": "2+2=",
+    "parse_ok": false,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": -0.5,
+    "error_type": "empty_segment"
+  },
+  {
+    "prompt": "1+8=",
+    "completion": "",
+    "full_trace": "1+8=",
+    "parse_ok": false,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": -0.5,
+    "error_type": "empty_segment"
+  },
+  {
+    "prompt": "3+4=",
+    "completion": "",
+    "full_trace": "3+4=",
+    "parse_ok": false,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": -0.5,
+    "error_type": "empty_segment"
+  },
+  {
+    "prompt": "0+6=",
+    "completion": "",
+    "full_trace": "0+6=",
+    "parse_ok": false,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": -0.5,
+    "error_type": "empty_segment"
+  },
+  {
+    "prompt": "2+9=",
+    "completion": "",
+    "full_trace": "2+9=",
+    "parse_ok": false,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": -0.5,
+    "error_type": "empty_segment"
+  },
+  {
+    "prompt": "0+4=",
+    "completion": "",
+    "full_trace": "0+4=",
+    "parse_ok": false,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": -0.5,
+    "error_type": "empty_segment"
+  },
+  {
+    "prompt": "2+1=",
+    "completion": "",
+    "full_trace": "2+1=",
+    "parse_ok": false,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": -0.5,
+    "error_type": "empty_segment"
+  }
+]

@@ -41,6 +41,8 @@
 - After any notebook or module change that Colab depends on, commit and push before using Colab clone/pull.
 - Otherwise Colab may load an old repo version even if local files are already updated.
 - If notebook work for Colab is completed successfully, commit and push automatically without asking again.
+- For notebook runners, always detect whether GPU is available and use GPU automatically when possible.
+- Do not leave notebook execution hardcoded to CPU if CUDA is available.
 - The notebook must save:
   - checkpoints
   - protocol log

@@ -1,0 +1,102 @@
+[
+  {
+    "prompt": "5243+5763=",
+    "completion": "20+40+40+60+0+40+20+40+0+10+20+",
+    "full_trace": "5243+5763=20+40+40+60+0+40+20+40+0+10+20+",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19590000000000002,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "4042+4777=",
+    "completion": "20+40+40+60+0+20+20+40+0+10+20+20+40+40+20+20+20",
+    "full_trace": "4042+4777=20+40+40+60+0+20+20+40+0+10+20+20+40+40+20+20+20",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1942,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "3411+4689=",
+    "completion": "20+40+40+40+0+20+20+40+0+10+20+",
+    "full_trace": "3411+4689=20+40+40+40+0+20+20+40+0+10+20+",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19590000000000002,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "4069+3133=",
+    "completion": "40+40+40+40+0+20+20+40+0+10+20+20+40+40+20+20+20",
+    "full_trace": "4069+3133=40+40+40+40+0+20+20+40+0+10+20+20+40+40+20+20+20",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1942,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "2160+9705=",
+    "completion": "40+40+40+40+40+20+40+40+10+20+20+40+40+40+20+20+",
+    "full_trace": "2160+9705=40+40+40+40+40+20+40+40+10+20+20+40+40+40+20+20+",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1942,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "4504+5827=",
+    "completion": "40+40+40+40+0+40+40+40+0+10+20+20+40+40+40+20+20",
+    "full_trace": "4504+5827=40+40+40+40+0+40+40+40+0+10+20+20+40+40+40+20+20",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1942,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "1491+8071=",
+    "completion": "40+40+40+40+0+40+20+40+0+10+20+20+40+40+20+20+20",
+    "full_trace": "1491+8071=40+40+40+40+0+40+20+40+0+10+20+20+40+40+20+20+20",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1942,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "3069+1236=",
+    "completion": "20+40+40+60+0+40+20+40+0+10+20+20+40+40+20+20+20",
+    "full_trace": "3069+1236=20+40+40+60+0+40+20+40+0+10+20+20+40+40+20+20+20",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1942,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "5519+3403=",
+    "completion": "40+40+40+40+0+40+40+40+40+20+20+40+40+40+20+20+2",
+    "full_trace": "5519+3403=40+40+40+40+0+40+40+40+40+20+20+40+40+40+20+20+2",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1942,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "2391+5299=",
+    "completion": "40+40+40+40+0+40+40+40+0+10+20+20+40+40+20+20+20",
+    "full_trace": "2391+5299=40+40+40+40+0+40+40+40+0+10+20+20+40+40+20+20+20",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1942,
+    "error_type": "bad_final"
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "prompt": "43948+48110=",
+    "completion": "0",
+    "full_trace": "43948+48110=0",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19870000000000002,
+    "error_type": null
+  },
+  {
+    "prompt": "99818+99663=",
+    "completion": "0",
+    "full_trace": "99818+99663=0",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19870000000000002,
+    "error_type": null
+  },
+  {
+    "prompt": "34343+95460=",
+    "completion": "0",
+    "full_trace": "34343+95460=0",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19870000000000002,
+    "error_type": null
+  },
+  {
+    "prompt": "40219+97318=",
+    "completion": "0",
+    "full_trace": "40219+97318=0",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19870000000000002,
+    "error_type": null
+  },
+  {
+    "prompt": "29288+39512=",
+    "completion": "0",
+    "full_trace": "29288+39512=0",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19870000000000002,
+    "error_type": null
+  },
+  {
+    "prompt": "94011+34559=",
+    "completion": "2",
+    "full_trace": "94011+34559=2",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19870000000000002,
+    "error_type": null
+  },
+  {
+    "prompt": "27067+19283=",
+    "completion": "0",
+    "full_trace": "27067+19283=0",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19870000000000002,
+    "error_type": null
+  },
+  {
+    "prompt": "79640+38037=",
+    "completion": "2",
+    "full_trace": "79640+38037=2",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19870000000000002,
+    "error_type": null
+  },
+  {
+    "prompt": "48621+13928=",
+    "completion": "0",
+    "full_trace": "48621+13928=0",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19870000000000002,
+    "error_type": null
+  },
+  {
+    "prompt": "66568+26553=",
+    "completion": "2",
+    "full_trace": "66568+26553=2",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19870000000000002,
+    "error_type": null
+  }
+]

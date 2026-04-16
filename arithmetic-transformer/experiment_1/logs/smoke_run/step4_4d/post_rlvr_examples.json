@@ -1,0 +1,102 @@
+[
+  {
+    "prompt": "5243+5763=",
+    "completion": "2",
+    "full_trace": "5243+5763=2",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19890000000000002,
+    "error_type": null
+  },
+  {
+    "prompt": "4042+4777=",
+    "completion": "2",
+    "full_trace": "4042+4777=2",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19890000000000002,
+    "error_type": null
+  },
+  {
+    "prompt": "3411+4689=",
+    "completion": "2",
+    "full_trace": "3411+4689=2",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19890000000000002,
+    "error_type": null
+  },
+  {
+    "prompt": "4069+3133=",
+    "completion": "2",
+    "full_trace": "4069+3133=2",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19890000000000002,
+    "error_type": null
+  },
+  {
+    "prompt": "2160+9705=",
+    "completion": "2",
+    "full_trace": "2160+9705=2",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19890000000000002,
+    "error_type": null
+  },
+  {
+    "prompt": "4504+5827=",
+    "completion": "2",
+    "full_trace": "4504+5827=2",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19890000000000002,
+    "error_type": null
+  },
+  {
+    "prompt": "1491+8071=",
+    "completion": "2",
+    "full_trace": "1491+8071=2",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19890000000000002,
+    "error_type": null
+  },
+  {
+    "prompt": "3069+1236=",
+    "completion": "2",
+    "full_trace": "3069+1236=2",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19890000000000002,
+    "error_type": null
+  },
+  {
+    "prompt": "5519+3403=",
+    "completion": "2",
+    "full_trace": "5519+3403=2",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19890000000000002,
+    "error_type": null
+  },
+  {
+    "prompt": "2391+5299=",
+    "completion": "2",
+    "full_trace": "2391+5299=2",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19890000000000002,
+    "error_type": null
+  }
+]

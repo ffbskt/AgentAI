@@ -1,0 +1,9 @@
+{
+  "phase": "step2_2d",
+  "post_sft_final_answer_accuracy": 0.0,
+  "post_sft_parseable_trace_rate": 1.0,
+  "post_rlvr_final_answer_accuracy": 0.0,
+  "post_rlvr_parseable_trace_rate": 0.78125,
+  "post_rlvr_full_step_valid_rate": 0.0,
+  "checkpoint": "logs\\checkpoints\\step2_2d.pt"
+}

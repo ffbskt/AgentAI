@@ -1,0 +1,102 @@
+[
+  {
+    "prompt": "43+47=",
+    "completion": "",
+    "full_trace": "43+47=",
+    "parse_ok": false,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": -0.5,
+    "error_type": "empty_segment"
+  },
+  {
+    "prompt": "33+93=",
+    "completion": "",
+    "full_trace": "33+93=",
+    "parse_ok": false,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": -0.5,
+    "error_type": "empty_segment"
+  },
+  {
+    "prompt": "28+38=",
+    "completion": "4",
+    "full_trace": "28+38=4",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1993,
+    "error_type": null
+  },
+  {
+    "prompt": "92+33=",
+    "completion": "4",
+    "full_trace": "92+33=4",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1993,
+    "error_type": null
+  },
+  {
+    "prompt": "26+19=",
+    "completion": "4",
+    "full_trace": "26+19=4",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1993,
+    "error_type": null
+  },
+  {
+    "prompt": "47+13=",
+    "completion": "",
+    "full_trace": "47+13=",
+    "parse_ok": false,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": -0.5,
+    "error_type": "empty_segment"
+  },
+  {
+    "prompt": "65+26=",
+    "completion": "4",
+    "full_trace": "65+26=4",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1993,
+    "error_type": null
+  },
+  {
+    "prompt": "11+45=",
+    "completion": "9",
+    "full_trace": "11+45=9",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1993,
+    "error_type": null
+  },
+  {
+    "prompt": "28+20=",
+    "completion": "4",
+    "full_trace": "28+20=4",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1993,
+    "error_type": null
+  },
+  {
+    "prompt": "65+27=",
+    "completion": "9",
+    "full_trace": "65+27=9",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1993,
+    "error_type": null
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "prompt": "43948+48110=",
+    "completion": "2000000000000000000000000000000+4000000000000000",
+    "full_trace": "43948+48110=2000000000000000000000000000000+4000000000000000",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.194,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "99818+99663=",
+    "completion": "20000000000000000000000000+2000+4000000000000000",
+    "full_trace": "99818+99663=20000000000000000000000000+2000+4000000000000000",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.194,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "34343+95460=",
+    "completion": "20000000000000000000000000000000+400000000000000",
+    "full_trace": "34343+95460=20000000000000000000000000000000+400000000000000",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.194,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "40219+97318=",
+    "completion": "20000000000000000000000000000000+400000000000000",
+    "full_trace": "40219+97318=20000000000000000000000000000000+400000000000000",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.194,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "29288+39512=",
+    "completion": "2000000000000000000000000000000+4000000000000000",
+    "full_trace": "29288+39512=2000000000000000000000000000000+4000000000000000",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.194,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "94011+34559=",
+    "completion": "2000000000000000000000000000000+4000000000000000",
+    "full_trace": "94011+34559=2000000000000000000000000000000+4000000000000000",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.194,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "27067+19283=",
+    "completion": "20000000000000000000000000000000+400000000000000",
+    "full_trace": "27067+19283=20000000000000000000000000000000+400000000000000",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.194,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "79640+38037=",
+    "completion": "20000000000000000000000000000000+400000000000000",
+    "full_trace": "79640+38037=20000000000000000000000000000000+400000000000000",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.194,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "48621+13928=",
+    "completion": "20000000000000000000000000000000+400000000000000",
+    "full_trace": "48621+13928=20000000000000000000000000000000+400000000000000",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.194,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "66568+26553=",
+    "completion": "20000000000000000000000000+2000+4000000000000000",
+    "full_trace": "66568+26553=20000000000000000000000000+2000+4000000000000000",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.194,
+    "error_type": "bad_final"
+  }
+]
