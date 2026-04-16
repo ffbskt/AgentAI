@@ -1,0 +1,102 @@
+[
+  {
+    "prompt": "4+4=",
+    "completion": "9+713",
+    "full_trace": "4+4=9+713",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1991,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "2+3=",
+    "completion": "9+713",
+    "full_trace": "2+3=9+713",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1991,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "2+3=",
+    "completion": "9+713",
+    "full_trace": "2+3=9+713",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1991,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "2+2=",
+    "completion": "9+713",
+    "full_trace": "2+2=9+713",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1991,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "1+8=",
+    "completion": "9+713",
+    "full_trace": "1+8=9+713",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1991,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "3+4=",
+    "completion": "9+713",
+    "full_trace": "3+4=9+713",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1991,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "0+6=",
+    "completion": "9+71",
+    "full_trace": "0+6=9+71",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.19920000000000002,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "2+9=",
+    "completion": "9+713",
+    "full_trace": "2+9=9+713",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1991,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "0+4=",
+    "completion": "9+713",
+    "full_trace": "0+4=9+713",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1991,
+    "error_type": "bad_final"
+  },
+  {
+    "prompt": "2+1=",
+    "completion": "9+713",
+    "full_trace": "2+1=9+713",
+    "parse_ok": true,
+    "final_ok": false,
+    "valid_step_fraction": 0.0,
+    "reward_total": 0.1991,
+    "error_type": "bad_final"
+  }
+]

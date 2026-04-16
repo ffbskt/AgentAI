@@ -1,0 +1,2 @@
+phase,post_sft_final_answer_accuracy,post_sft_parseable_trace_rate,post_rlvr_final_answer_accuracy,post_rlvr_parseable_trace_rate,post_rlvr_full_step_valid_rate,checkpoint
+step1_1d,0.0,0.0,0.0,1.0,0.0,logs\checkpoints\step1_1d.pt

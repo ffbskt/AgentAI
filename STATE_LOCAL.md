@@ -6,7 +6,7 @@ Files:
 - arithmetic-transformer/rlvr_tiny/
 
 Curent task [4]:
-Create `experiment_1` with configs and logs, add one training entry point using `rlvr_tiny/`, and run a smoke training pass for 1 epoch per phase up to 5 digits.
+Refactor `experiment_1` into a smaller phase-oriented training API and rebuild the Colab notebook so each phase can be previewed, started, and inspected in separate cells.
 
 Goal task:
 - [done] Rewrite `AGENT.md` into a clear working instruction file.
@@ -34,4 +34,7 @@ Goal task:
 - [todo] Create `experiment_1/` with curriculum config and logging structure.
 - [todo] Add `train_experiment_1.py` using functions from `rlvr_tiny/`.
 - [todo] Run a smoke training pass with 1 epoch per phase and save logs/configs.
+- [done] Simplify `train_experiment_1.py` into phase-oriented functions for config loading, preview, one-phase training, and full experiment run.
+- [done] Rebuild the Colab notebook so config is editable in cells and each phase can be run or inspected separately.
+- [done] Run a one-phase smoke check on the refactored path and confirm it still trains and logs.
 - [done] Removed `arithmetic-transformer/verify_walkthrough.ipynb` as an unnecessary step after review. This was a wrong step and should not be restored unless explicitly needed.
