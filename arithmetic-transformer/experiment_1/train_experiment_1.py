@@ -4,6 +4,7 @@ import json
 from copy import deepcopy
 from pathlib import Path
 import sys
+from typing import Any, Dict
 
 import torch
 
@@ -18,8 +19,20 @@ from rlvr_tiny.train_rlvr import run_rlvr
 from rlvr_tiny.train_sft import build_model, run_sft
 
 
-def load_config(config_path: Path):
+def deep_update(base: Dict[str, Any], override: Dict[str, Any]) -> Dict[str, Any]:
+    result = deepcopy(base)
+    for key, value in override.items():
+        if isinstance(value, dict) and isinstance(result.get(key), dict):
+            result[key] = deep_update(result[key], value)
+        else:
+            result[key] = value
+    return result
+
+
+def load_config(config_path: Path, config_override: Dict[str, Any] = None):
     payload = json.loads(config_path.read_text(encoding="utf-8"))
+    if config_override:
+        payload = deep_update(payload, config_override)
     model_cfg = ModelConfig(**payload["model"])
     train_defaults = payload["train_defaults"]
     phases = []
@@ -60,6 +73,7 @@ def phase_summary_row(phase_name, post_sft_metrics, post_rlvr_metrics, checkpoin
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", default="config.json")
+    parser.add_argument("--config-json", default=None)
     parser.add_argument("--device", default="cpu")
     parser.add_argument("--output-dir", default="experiment_1/logs/smoke_run")
     args = parser.parse_args()
@@ -67,7 +81,8 @@ def main():
     root = Path(args.output_dir)
     root.mkdir(parents=True, exist_ok=True)
     config_path = Path(args.config)
-    raw_config, phases = load_config(config_path)
+    config_override = json.loads(args.config_json) if args.config_json else None
+    raw_config, phases = load_config(config_path, config_override=config_override)
     (root / "used_config.json").write_text(json.dumps(raw_config, indent=2), encoding="utf-8")
 
     device = torch.device(args.device)
