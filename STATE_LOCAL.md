@@ -32,3 +32,4 @@ Goal task:
 - [done] Add two synthetic corner-case model outputs: one correct and one incorrect.
 - [done] Add focused verifier tests that use those synthetic outputs with each verifier function.
 - [done] Run the tests and confirm the verifier behaves correctly.
+- [done] Removed `arithmetic-transformer/verify_walkthrough.ipynb` as an unnecessary step after review. This was a wrong step and should not be restored unless explicitly needed.
