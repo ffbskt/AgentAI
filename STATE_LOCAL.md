@@ -5,8 +5,8 @@ Files:
 - arithmetic-transformer/experiment_1/
 - arithmetic-transformer/rlvr_tiny/
 
-Curent task [7]:
-Harden `experiment_1/run_experiment_1.ipynb` imports against stale notebook kernels by forcing a fresh `train_experiment_1` load and printing resolved module details.
+Curent task [8]:
+Make Colab notebooks clone and update the exact requested git branch, and record that rule in `Agent.md`.
 
 Goal task:
 - [done] Rewrite `AGENT.md` into a clear working instruction file.
@@ -41,3 +41,4 @@ Goal task:
 - [done] Make `experiment_1/run_experiment_1.ipynb` fail loudly and show sanity output in Colab and local notebook runners.
 - [done] Rebuild the notebook startup cells so local and Colab `Run all` use the same path setup flow.
 - [done] Make notebook imports robust to stale kernels and cached old module versions.
+- [done] Make Colab clone/pull the requested branch instead of relying on the repo default branch.
