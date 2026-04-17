@@ -5,8 +5,8 @@ Files:
 - arithmetic-transformer/experiment_1/
 - arithmetic-transformer/rlvr_tiny/
 
-Curent task [4]:
-Refactor `experiment_1` into a smaller phase-oriented training API and rebuild the Colab notebook so each phase can be previewed, started, and inspected in separate cells.
+Curent task [5]:
+Debug `experiment_1/run_experiment_1.ipynb` so notebook cells print reliably, fail loudly on bad setup, and work in both Colab and local notebook runners without fragile shell magics.
 
 Goal task:
 - [done] Rewrite `AGENT.md` into a clear working instruction file.
@@ -38,3 +38,4 @@ Goal task:
 - [done] Rebuild the Colab notebook so config is editable in cells and each phase can be run or inspected separately.
 - [done] Run a one-phase smoke check on the refactored path and confirm it still trains and logs.
 - [done] Removed `arithmetic-transformer/verify_walkthrough.ipynb` as an unnecessary step after review. This was a wrong step and should not be restored unless explicitly needed.
+- [done] Make `experiment_1/run_experiment_1.ipynb` fail loudly and show sanity output in Colab and local notebook runners.
