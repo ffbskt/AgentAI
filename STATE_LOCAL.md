@@ -5,8 +5,8 @@ Files:
 - arithmetic-transformer/experiment_1/
 - arithmetic-transformer/rlvr_tiny/
 
-Curent task [6]:
-Rebuild `experiment_1/run_experiment_1.ipynb` startup cells so `Run all` works in both local and Colab modes with one environment switch and consistent path handling.
+Curent task [7]:
+Harden `experiment_1/run_experiment_1.ipynb` imports against stale notebook kernels by forcing a fresh `train_experiment_1` load and printing resolved module details.
 
 Goal task:
 - [done] Rewrite `AGENT.md` into a clear working instruction file.
@@ -40,3 +40,4 @@ Goal task:
 - [done] Removed `arithmetic-transformer/verify_walkthrough.ipynb` as an unnecessary step after review. This was a wrong step and should not be restored unless explicitly needed.
 - [done] Make `experiment_1/run_experiment_1.ipynb` fail loudly and show sanity output in Colab and local notebook runners.
 - [done] Rebuild the notebook startup cells so local and Colab `Run all` use the same path setup flow.
+- [done] Make notebook imports robust to stale kernels and cached old module versions.
