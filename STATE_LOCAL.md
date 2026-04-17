@@ -5,8 +5,8 @@ Files:
 - arithmetic-transformer/experiment_1/
 - arithmetic-transformer/rlvr_tiny/
 
-Curent task [5]:
-Debug `experiment_1/run_experiment_1.ipynb` so notebook cells print reliably, fail loudly on bad setup, and work in both Colab and local notebook runners without fragile shell magics.
+Curent task [6]:
+Rebuild `experiment_1/run_experiment_1.ipynb` startup cells so `Run all` works in both local and Colab modes with one environment switch and consistent path handling.
 
 Goal task:
 - [done] Rewrite `AGENT.md` into a clear working instruction file.
@@ -39,3 +39,4 @@ Goal task:
 - [done] Run a one-phase smoke check on the refactored path and confirm it still trains and logs.
 - [done] Removed `arithmetic-transformer/verify_walkthrough.ipynb` as an unnecessary step after review. This was a wrong step and should not be restored unless explicitly needed.
 - [done] Make `experiment_1/run_experiment_1.ipynb` fail loudly and show sanity output in Colab and local notebook runners.
+- [done] Rebuild the notebook startup cells so local and Colab `Run all` use the same path setup flow.
